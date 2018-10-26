@@ -16,7 +16,8 @@ export class TemperatureService {
 
   public fetchData(): Promise<any> {
     this.requestState = 'loading';
-    return (this.httpClient.get('https://api.npoint.io/7744ba09a781e3899581').toPromise() as Promise<any>)
+    return (this.httpClient.get('/assets/data/temperature.json')
+      .toPromise() as Promise<any>)
       .then(
         (data: any[])  => {
           data.forEach(d => {
