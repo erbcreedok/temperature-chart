@@ -16,7 +16,7 @@ export class PrecipitationService {
 
   public fetchData(): Promise<any> {
     this.requestState = 'loading';
-    return (this.httpClient.get('/assets/data/temperature.json')
+    return (this.httpClient.get('/assets/data/precipitation.json')
       .toPromise() as Promise<any>)
       .then(
         (data: any[])  => {

@@ -58,7 +58,7 @@ export class TemperatureComponent implements OnInit, OnDestroy {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: 'Данные осадков за последние 120 лет'
+        text: 'Данные о температуре за последние 120 лет'
       },
       subtitles: [{
         text: ''
