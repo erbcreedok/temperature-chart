@@ -1,0 +1,39 @@
+.sidebar-container {
+  width: 250px;
+  height: 100%;
+  border-right: 1px solid #dfe2e5;
+  overflow: auto;
+}
+.brand {
+  padding: 20px 0 20px 20px;
+  border-bottom: 1px solid #dfe2e5;
+  color: #004976;
+  font-weight: 500;
+}
+.nav-panel {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.nav-item {
+  margin: 5px 0;
+}
+.nav-link {
+  display: block;
+  padding: 10px 10px 10px 20px;
+  color: #7f8fa4;
+  transition: .1s;
+  background: white;
+  text-decoration: none;
+  &:hover, &.active {
+    background: #eff3f6;
+    color: #004976;
+    transition: 0s;
+  }
+}
+.content {
+  min-height: 100vh;
+  overflow: auto;
+  background: white;
+  padding: 15px;
+}

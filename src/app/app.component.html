@@ -1,0 +1,20 @@
+<mat-sidenav-container class="app-container">
+  <mat-sidenav mode="side" opened>
+    <div class="sidebar-container">
+      <div class="brand">Архив метеослужбы</div>
+      <ul class="nav-panel">
+        <li class="nav-item">
+          <a [routerLink]="['temperature']" [routerLinkActive]="['active']" class="nav-link">Температура</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['precipitation']" [routerLinkActive]="['active']" class="nav-link">Осадки</a>
+        </li>
+      </ul>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

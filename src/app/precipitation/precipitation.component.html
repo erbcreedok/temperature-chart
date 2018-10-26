@@ -1,0 +1,20 @@
+<div class="container">
+  <mat-form-field style="margin-right: 10px">
+    <input matInput [matDatepicker]="pickerFrom" placeholder="Показать от" [min]="minDate" [max]="dateTo.value" [formControl]="dateFrom">
+    <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+    <mat-datepicker #pickerFrom></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="pickerTo" placeholder="Показать до" [formControl]="dateTo" [min]="dateFrom.value" [max]="maxDate">
+    <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+    <mat-datepicker #pickerTo></mat-datepicker>
+  </mat-form-field>
+  <button mat-button color="primary" (click)="filterChart()">Отфильтровать</button>
+  <div class="chart-wrapper" style="height: 358px; overflow: hidden" [ngClass]="{'loading': requestState === 'loading'}">
+    <div class="chart-container" id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <div class="loading-overlay" *ngIf="requestState === 'loading'">
+      <p><i class="fas fa-spinner loading-spinner"></i></p>
+      <p>Ваши данные загружаются</p>
+    </div>
+  </div>
+</div>
